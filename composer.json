@@ -1,119 +1,46 @@
 {
-  "name": "quellabs/framework-dev",
-  "description": "Quellabs Framework Development Environment",
-  "type": "project",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
+  "name": "quellabs/cache",
+  "description": "High-performance caching component for the Quellabs ecosystem",
+  "keywords": [
+    "cache",
+    "caching",
+    "performance",
+    "storage",
+    "quellabs"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/quellabs/cache",
+  "support": {
+    "issues": "https://github.com/quellabs/cache/issues",
+    "source": "https://github.com/quellabs/cache"
+  },
+  "authors": [
     {
-      "type": "path",
-      "url": "./packages/annotation-reader"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-objectquel"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-smarty"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-twig"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-skeleton"
-    },
-    {
-      "type": "path",
-      "url": "./packages/contracts"
-    },
-    {
-      "type": "path",
-      "url": "./packages/dependency-injection"
-    },
-    {
-      "type": "path",
-      "url": "./packages/discover"
-    },
-    {
-      "type": "path",
-      "url": "./packages/objectquel"
-    },
-    {
-      "type": "path",
-      "url": "./packages/sculpt"
-    },
-    {
-      "type": "path",
-      "url": "./packages/signal-hub"
-    },
-    {
-      "type": "path",
-      "url": "./packages/support"
+      "name": "Quellabs Team",
+      "email": "team@quellabs.com"
     }
   ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.3"
+    }
+  },
   "require": {
     "php": "^8.3",
-    "monolog/monolog": "*",
-    "symfony/http-foundation": "*",
-    "dragonmantank/cron-expression": "*",
-    "robmorgan/phinx": "*",
-    "cakephp/database": "*",
-    "softcreatr/jsonpath": "*",
-    "composer-plugin-api": "^2.0"
+    "quellabs/contracts": "^1.0",
+    "quellabs/support": "^1.0"
   },
   "require-dev": {
-    "phpstan/phpstan": "*",
-    "phpunit/phpunit": "^9",
-    "composer/composer": "^2.0",
-    "quellabs/sculpt": "dev-main as 1.999.999",
-    "quellabs/contracts": "dev-main as 1.999.999",
-    "quellabs/support": "dev-main as 1.999.999",
-    "quellabs/annotation-reader": "dev-main as 1.999.999",
-    "quellabs/canvas": "dev-main as 1.999.999",
-    "quellabs/canvas-objectquel": "dev-main as 1.999.999",
-    "quellabs/canvas-smarty": "dev-main as 1.999.999",
-    "quellabs/canvas-twig": "dev-main as 1.999.999",
-    "quellabs/canvas-skeleton": "dev-main as 1.999.999",
-    "quellabs/dependency-injection": "dev-main as 1.999.999",
-    "quellabs/discover": "dev-main as 1.999.999",
-    "quellabs/objectquel": "dev-main as 1.999.999",
-    "quellabs/signal-hub": "dev-main as 1.999.999"
+    "phpunit/phpunit": "^10.0",
+    "phpstan/phpstan": "^1.10"
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/",
-      "Quellabs\\Contracts\\": "packages/contracts/src/",
-      "Quellabs\\Support\\": "packages/support/src/",
-      "Quellabs\\Discover\\": "packages/discover/src/",
-      "Quellabs\\DependencyInjection\\": "packages/dependency-injection/src/",
-      "Quellabs\\AnnotationReader\\": "packages/annotation-reader/src/",
-      "Quellabs\\Sculpt\\": "packages/sculpt/src/",
-      "Quellabs\\ObjectQuel\\": "packages/objectquel/src/",
-      "Quellabs\\SignalHub\\": "packages/signal-hub/src/",
-      "Quellabs\\Canvas\\": "packages/canvas/src/",
-      "Quellabs\\Canvas\\ObjectQuel\\": "packages/canvas-objectquel/src/",
-      "Quellabs\\Canvas\\Smarty\\": "packages/canvas-smarty/src/",
-      "Quellabs\\Canvas\\Twig\\": "packages/canvas-twig/src/"
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "quellabs/discover": false
-    }
-  },
-  "extra": {
-    "discover": {
-      "sculpt": {
-        "provider": "App\\Sculpt\\ServiceProvider"
-      }
+      "Quellabs\\Cache\\": "src/"
     }
   }
 }
